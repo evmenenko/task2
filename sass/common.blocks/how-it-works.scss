@@ -1,0 +1,28 @@
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 154px 250px;
+
+  &__title {
+    position: relative;
+    z-index: 0;
+    margin-bottom: 134px;
+
+    &:after {
+      content: url('../../../asset/img/under-line-2.png');
+      position: absolute;
+      left: 0;
+      bottom: -36px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+
+    width: 100%;
+  }
+}

@@ -1,8 +1,20 @@
-* {
+@import "colors.scss";
+
+:root {
   box-sizing: border-box;
+
+  color: $primary-text-color;
+  background-color: $main-bg-color;
+
+  font-family: 'Lato', sans-serif;
   font-size: 10px;
 }
 
-a {
+a, a:visited, a:hover, a:active {
   text-decoration: none;
+  color: $primary-text-color;
+}
+
+input {
+  border: none;
 }

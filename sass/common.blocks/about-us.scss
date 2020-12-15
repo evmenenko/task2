@@ -1,0 +1,99 @@
+@import "../colors.scss";
+
+.about-us {
+  position: relative;
+
+  &__caption {
+    position: absolute;
+    left: 220px;
+
+    display: flex;
+    align-items: center;
+    
+    border: 1px solid $main-text-color;
+    border-right: none;
+    background-color: $main-bg-color;
+    color: $main-text-color;
+
+    &-circle {
+      height: 26px;
+      width: 26px;
+      border-radius: 13px;
+      background-color: $main-text-color;
+    }
+
+    &-line {
+      height: 2px;
+      width: 176px;
+      background-color: $main-text-color;
+      margin-right: 10px;
+    }
+
+    &-text {
+      color: $main-text-color;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 0;
+
+    margin: 0px auto;
+    padding-top: 170px;
+    width: fit-content;
+
+    &:after {
+      content: url('../../../asset/img/under-line-3.png');
+      position: absolute;
+      right: 0;
+      bottom: -36px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 100px 220px 160px;
+  }
+
+  &__info-block {
+    padding-left: 200px;
+    width: 900px;
+  }
+
+  &__info-block-title {
+    color: $main-text-color;
+  }
+
+  &__info-block-subtitle {
+    color: $main-text-color;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      border: 1px solid $main-text-color;
+      width: 260px;
+    }
+  }
+
+  &__info-block-paragraph {
+    color: $secondary-text-color;
+  }
+
+  &__statistics-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    width: 800px;
+  }
+
+  &__statistics {
+    justify-content: space-between;
+    width: 230px;
+    height: 249px;
+    padding-bottom: 55px;
+    margin-bottom: 6px;
+  }
+}

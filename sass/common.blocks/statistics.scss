@@ -1,0 +1,63 @@
+@import "../colors.scss";
+
+@mixin basic-statistics-theme($color) {
+  border-bottom-color: $color;
+
+  .statistics__circle {
+    border: 16px solid transparentize($color, 0.5);
+    color: $color;
+  }
+
+  .statistics__circle:before {
+    background-color: $color;
+  }
+
+  .statistics__amount {
+    color: $color;
+  }
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__circle {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      margin: 2px;
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 32px;
+    }
+  }
+
+  &__amount {
+    font-size: 64px;
+  }
+
+  &__caption {
+    font-size: 32px;
+    color: transparentize($secondary-text-color, 0.3);
+  }
+
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+
+  &_success {
+    @include basic-statistics-theme($success-color);
+  }
+  &_danger {
+    @include basic-statistics-theme($danger-color);
+  }
+  &_warning {
+    @include basic-statistics-theme($warning-color);
+  }
+}

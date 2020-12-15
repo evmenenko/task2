@@ -1,0 +1,17 @@
+@import "../colors.scss";
+
+.button {
+  border: 1px solid $main-bg-color;
+  background-color: rgba(0, 0, 0, 0);
+  color: $primary-text-color;
+
+  &:hover {
+    background-color: $main-bg-color;
+    color: $main-text-color;
+  }
+
+  &:active {
+    background-color: $main-bg-color;
+    color: $main-text-color;
+  }
+}

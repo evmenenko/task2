@@ -1,0 +1,83 @@
+@import "../colors.scss";
+
+.interaction {
+  position: relative;
+
+  background-color: $primary-bg-color;
+
+  &__caption {
+    position: absolute;
+    left: 220px;
+
+    display: flex;
+    align-items: center;
+
+    &-circle {
+      height: 26px;
+      width: 26px;
+      border-radius: 13px;
+      background-color: $primary-text-color;
+    }
+
+    &-line {
+      height: 2px;
+      width: 176px;
+      background-color: $primary-text-color;
+      margin-right: 10px;
+    }
+
+    &-text {
+      color: $primary-text-color;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 380px 70px 420px;
+  }
+
+  &__info-block {
+    width: 950px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    width: 560px;
+  }
+
+  &__subtitle {
+    margin-bottom: 60px;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      border: 1px solid $primary-text-color;
+      width: 320px;
+    }
+  }
+
+  &__addition-infos {
+    position: relative;
+    margin-left: 100px;
+    width: 610px;
+
+    &-block {
+      position: absolute;
+
+      &-ask {
+        top: 60px;
+        background-image: url('../../../asset/img/rhombus/rhombus-2.png');
+      }
+      &-choose {
+        left: 230px;
+        top: 240px;
+        background-image: url('../../../asset/img/rhombus/rhombus-3.png');
+      }
+      &-select {
+        top: 420px;
+        background-image: url('../../../asset/img/rhombus/rhombus-1.png');
+      }
+    }
+  }
+}

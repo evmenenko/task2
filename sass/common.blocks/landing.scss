@@ -1,0 +1,67 @@
+@import '../colors.scss';
+
+.landing {
+  height: 1474px;
+
+  background-size: 100% 1474px;
+  background-image:
+    linear-gradient(to top, #04353e6b, #04353e5e),
+    linear-gradient(to top, #0f3ebe59, #6708da69),
+    url('../../../asset/img/landing.png');
+
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    z-index: 0;
+
+    &:after {
+      content: url('../../../asset/img/under-line-1.png');
+      position: absolute;
+      right: 0;
+      bottom: -36px;
+    }
+  }
+
+  &__content {
+    margin-top: 570px;
+    display: flex;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__info {
+    margin-top: 60px;
+    padding-right: 94px;
+    
+    font-size: 49px;
+    font-weight: normal;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-top: 256px;
+  }
+
+  &__button {
+    height: 76px;
+    font-size: 26px;
+    padding: 0px 28px;
+
+    &:first-child {
+      margin-right: 80px;
+    }
+  }
+
+  &__mobile-image-container {
+    margin-left: 110px;
+  }
+}

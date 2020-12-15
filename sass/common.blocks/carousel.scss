@@ -1,0 +1,37 @@
+@import '../colors.scss';
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__arrow {
+    padding: 0 70px;
+
+    font-size: 60px;
+    color: $muted-text-color;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__items-item {
+    flex: 0 0 14.286%;
+    max-width: 14.286%; // 1 / 7
+    text-align: center;
+
+    & > img {
+      max-width: 80%;
+    }
+  }
+}

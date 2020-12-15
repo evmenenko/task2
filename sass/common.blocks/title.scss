@@ -1,0 +1,21 @@
+@import '../colors.scss';
+
+.title {
+  color: $main-text-color;
+  font-size: 82px;
+
+  &_strong-theme {
+    color: $primary-text-color;
+    font-weight: 900;
+  }
+
+  &_lite-theme {
+    color: $main-text-color;
+    font-weight: 300;
+    letter-spacing: 4px;
+  }
+
+  &_with-shadow {
+    text-shadow: 0px 6px black;
+  }
+}

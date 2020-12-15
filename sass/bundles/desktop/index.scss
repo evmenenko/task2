@@ -1,4 +1,24 @@
-@import "../../normalize.scss";
+@import "../../reset.scss";
+@import "../../../asset/fonts/lato/lato.css";
+@import "../../../asset/fonts/icomoon/style.css";
 @import "../../styles.scss";
 
-
+@import "../../common.blocks/header.scss";
+@import "../../common.blocks/landing.scss";
+@import "../../common.blocks/title.scss";
+@import "../../common.blocks/nav.scss";
+@import "../../common.blocks/how-it-works.scss";
+@import "../../common.blocks/action.scss";
+@import "../../common.blocks/button.scss";
+@import "../../common.blocks/caption.scss";
+@import "../../common.blocks/info-block.scss";
+@import "../../common.blocks/interaction.scss";
+@import "../../common.blocks/features.scss";
+@import "../../common.blocks/about-us.scss";
+@import "../../common.blocks/events.scss";
+@import "../../common.blocks/statistics.scss";
+@import "../../common.blocks/card.scss";
+@import "../../common.blocks/footer.scss";
+@import "../../common.blocks/partners.scss";
+@import "../../common.blocks/carousel.scss";
+@import "../../common.blocks/addition-info.scss";

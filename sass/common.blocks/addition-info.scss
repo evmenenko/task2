@@ -1,0 +1,23 @@
+.addition-info {
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+
+  width: 385px;
+  height: 385px;
+
+  &__image {
+    margin-top: 70px;
+  }
+  
+  &__text {
+    margin-top: 20px;
+
+    font-size: 32px;
+    color: black;
+  }
+}

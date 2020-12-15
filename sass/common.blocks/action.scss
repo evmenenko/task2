@@ -1,0 +1,37 @@
+@import "../colors.scss";
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: $main-bg-color;
+    border: 1px solid $primary-bg-color;
+    font-size: 80px;
+
+    height: 162px;
+    width: 162px;
+
+    &:visited {
+      color: $main-text-color;
+    }
+    &:hover, &:active {
+      background-color: $primary-bg-color;
+      color: $primary-text-color;
+    }
+  }
+
+  &__info {
+    margin-top: 68px;
+
+    text-align: center;
+    color: $main-text-color;
+    font-size: 36px;
+    font-weight: 600;
+  }
+}
