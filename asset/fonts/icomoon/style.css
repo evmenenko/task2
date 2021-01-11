@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?sny61a');
-  src:  url('fonts/icomoon.eot?sny61a#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?sny61a') format('truetype'),
-    url('fonts/icomoon.woff?sny61a') format('woff'),
-    url('fonts/icomoon.svg?sny61a#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?rvoa9u');
+  src:  url('fonts/icomoon.eot?rvoa9u#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rvoa9u') format('truetype'),
+    url('fonts/icomoon.woff?rvoa9u') format('woff'),
+    url('fonts/icomoon.svg?rvoa9u#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -44,9 +44,6 @@
 .icon-social-twitter-circular:before {
   content: "\e902";
 }
-.icon-social-pinterest-circular:before {
-  content: "\ead2";
-}
 .icon-envelope:before {
   content: "\e903";
 }
@@ -82,4 +79,10 @@
 }
 .icon-phone:before {
   content: "\e90e";
+}
+.icon-social-pinterest-circular:before {
+  content: "\ead2";
+}
+.icon-hamburger:before {
+  content: "\e90f";
 }

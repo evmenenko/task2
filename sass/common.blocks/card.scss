@@ -1,4 +1,6 @@
 @import "../colors.scss";
+@import "../constants.scss";
+@import "../breakpoints.scss";
 
 @mixin basic-card-theme($color) {
   .card__header:before {
@@ -11,22 +13,39 @@
     position: absolute;
     background-color: transparentize($color, 0.15);
   }
-
   .card__content {
     border-top: 4px solid $color;
   }
-
   .card__icon {
     color: $color;
   }
-
   .card__button {
     background-color: $color;
+  }
+  @include desktop {
+    .card__content {
+      border-top: (4px * $lg-xl-coeff) solid $color;
+    }
+  }
+  @include laptop {
+    .card__content {
+      border-top: (4px * $md-xl-coeff) solid $color;
+    }
+  }
+  @include tablet {
+    .card__content {
+      border-top: (4px * $sm-xl-coeff) solid $color;
+    }
+  }
+  @include phone {
+    .card__content {
+      border-top: (4px * $xs-xl-coeff) solid $color;
+    }
   }
 }
 
 .card {
-  &__header {
+  .card__header {
     z-index: 0;
     position: relative;
     text-align: center;
@@ -36,8 +55,7 @@
     text-align: center;
     border-bottom: 4px solid white;
   }
-
-  &__title {
+  .card__title {
     position: relative;
     font-size: 86px;
     z-index: 1;
@@ -46,8 +64,7 @@
       font-weight: bold;
     }
   }
-
-  &__content {
+  .card__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,13 +72,11 @@
 
     background-color: $main-bg-color;
   }
-
-  &__icon {
+  .card__icon {
     margin-top: 30px;
     font-size: 90px;
   }
-
-  &__text {
+  .card__text {
     margin-top: 20px;
     width: 420px;
 
@@ -70,8 +85,7 @@
     font-weight: 300;
     text-align: center;
   }
-
-  &__button {
+  .card__button {
     margin-top: 20px;
     margin-bottom: 55px;
     height: 56px;
@@ -86,14 +100,129 @@
 
     cursor: pointer;
   }
-
-  &_success {
+  &.card_success {
     @include basic-card-theme($success-color);
   }
-  &_danger {
+  &.card_danger {
     @include basic-card-theme($danger-color);
   }
-  &_warning {
+  &.card_warning {
     @include basic-card-theme($warning-color);
+  }
+  @include desktop {
+    .card__header {
+      padding: (57px * $lg-xl-coeff) 0px;
+      border-bottom: (4px * $lg-xl-coeff) solid white;
+    }
+    .card__title {
+      font-size: 86px * $lg-xl-coeff;
+    }
+    .card__icon {
+      margin-top: 30px * $lg-xl-coeff;
+      font-size: 90px * $lg-xl-coeff;
+    }
+    .card__text {
+      margin-top: 20px * $lg-xl-coeff;
+      width: 420px * $lg-xl-coeff;
+  
+      font-size: 22px * $lg-xl-coeff;
+    }
+    .card__button {
+      margin-top: 20px * $lg-xl-coeff;
+      margin-bottom: 55px * $lg-xl-coeff;
+      height: 56px * $lg-xl-coeff;
+      width: 200px * $lg-xl-coeff;
+  
+      border-radius: 28px * $lg-xl-coeff;
+  
+      font-size: 32px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    .card__header {
+      padding: (57px * $md-xl-coeff) 0px;
+      border-bottom: (4px * $md-xl-coeff) solid white;
+    }
+    .card__title {
+      font-size: 86px * $md-xl-coeff;
+    }
+    .card__icon {
+      margin-top: 30px * $md-xl-coeff;
+      font-size: 90px * $md-xl-coeff;
+    }
+    .card__text {
+      margin-top: 20px * $md-xl-coeff;
+      width: 420px * $md-xl-coeff;
+  
+      font-size: 22px * $md-xl-coeff;
+    }
+    .card__button {
+      margin-top: 20px * $md-xl-coeff;
+      margin-bottom: 55px * $md-xl-coeff;
+      height: 56px * $md-xl-coeff;
+      width: 200px * $md-xl-coeff;
+  
+      border-radius: 28px * $md-xl-coeff;
+  
+      font-size: 32px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    .card__header {
+      padding: (57px * $sm-xl-coeff) 0px;
+      border-bottom: (4px * $sm-xl-coeff) solid white;
+    }
+    .card__title {
+      font-size: 86px * $sm-xl-coeff;
+    }
+    .card__icon {
+      margin-top: 30px * $sm-xl-coeff;
+      font-size: 90px * $sm-xl-coeff;
+    }
+    .card__text {
+      margin-top: 20px * $sm-xl-coeff;
+      width: 420px * $sm-xl-coeff;
+  
+      font-size: 22px * $sm-xl-coeff;
+    }
+    .card__button {
+      margin-top: 20px * $sm-xl-coeff;
+      margin-bottom: 55px * $sm-xl-coeff;
+      height: 56px * $sm-xl-coeff;
+      width: 200px * $sm-xl-coeff;
+  
+      border-radius: 28px * $sm-xl-coeff;
+  
+      font-size: 32px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    .card__header {
+      padding: (57px * $xs-xl-coeff) 0px;
+      border-bottom: none;
+    }
+    .card__title {
+      font-size: 64px;
+    }
+    .card__icon {
+      margin-top: 30px * $xs-xl-coeff;
+      font-size: 90px * $xs-xl-coeff;
+    }
+    .card__text {
+      margin-top: 20px * $xs-xl-coeff;
+      width: 420px * $xs-xl-coeff;
+  
+      font-size: 22px * $xs-xl-coeff;
+    }
+    .card__button {
+      margin-top: 20px * $xs-xl-coeff;
+      margin-bottom: 55px * $xs-xl-coeff;
+      height: 56px * $xs-xl-coeff;
+      width: 200px * $xs-xl-coeff;
+  
+      border-radius: 28px * $xs-xl-coeff;
+  
+      font-size: 32px * $xs-xl-coeff;
+    }
   }
 }

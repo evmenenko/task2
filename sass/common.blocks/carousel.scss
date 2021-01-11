@@ -5,7 +5,9 @@
   justify-content: space-between;
   align-items: center;
 
-  &__arrow {
+  height: fit-content;
+
+  .carousel__arrow {
     padding: 0 70px;
 
     font-size: 60px;
@@ -17,21 +19,46 @@
       cursor: pointer;
     }
   }
-
-  &__items {
+  .carousel__items {
     display: flex;
     align-items: center;
     overflow: hidden;
     width: 100%;
   }
-
-  &__items-item {
+  .carousel__items-item {
     flex: 0 0 14.286%;
-    max-width: 14.286%; // 1 / 7
     text-align: center;
 
     & > img {
       max-width: 80%;
+    }
+  }
+  @include desktop {
+    .carousel__arrow {
+      padding: 0 (70px * $lg-xl-coeff);
+  
+      font-size: 60px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    .carousel__arrow {
+      padding: 0 (70px * $md-xl-coeff);
+  
+      font-size: 60px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    .carousel__arrow {
+      padding: 0 (70px * $sm-xl-coeff);
+  
+      font-size: 60px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    .carousel__arrow {
+      padding: 0 (70px * $xs-xl-coeff);
+  
+      font-size: 60px * $xs-xl-coeff;
     }
   }
 }

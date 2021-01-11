@@ -1,4 +1,6 @@
 @import "../colors.scss";
+@import "../constants.scss";
+@import "../breakpoints.scss";
 
 .events {
   display: flex;
@@ -9,24 +11,31 @@
 
   background-color: $secondary-bg-color;
   
-  &__title {
+  .events__title {
     position: relative;
     z-index: 0;
     margin-bottom: 160px;
 
     &:after {
-      content: url('../../../asset/img/under-line-2.png');
+      content: '';
       position: absolute;
       left: 0;
       bottom: -36px;
+
+      width: 128px;
+      height: 6px;
+
+      background-image: url('../../../asset/img/under-line-2.png');
+      background-size: cover;
     }
   }
-
-  &__list {
+  .events__list {
     display: flex;
+    :first-child {
+      order: 1;
+    }
   }
-
-  &__card {
+  .events__card {
     width: 575px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.22);
 
@@ -37,18 +46,102 @@
       transition: .1s linear;
     }
   }
-
-  &__card + &__card {
-    margin-left: 5px;
-  }
-
-  &__card-header-exernal {
+  .events__card-header-exernal {
     background-image: url('../../../asset/img/Public\ SPeaking.png');
   }
-  &__card-header-interactive {
+  .events__card-header-interactive {
     background-image: url('../../../asset/img/eye.png');
   }
-  &__card-header-internal {
+  .events__card-header-internal {
     background-image: url('../../../asset/img/conference.png');
+  }
+  @include large-desktop {
+    .events__card + .events__card {
+      margin-left: 5px;
+    }
+  }
+  @include desktop {
+    padding: (54px * $lg-xl-coeff) (460px * $lg-xl-coeff) (154px * $lg-xl-coeff);
+    
+    .events__title {
+      margin-bottom: 160px * $lg-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $lg-xl-coeff;
+  
+        width: 128px * $lg-xl-coeff;
+        height: 6px * $lg-xl-coeff;
+      }
+    }
+    .events__card {
+      width: 575px * $lg-xl-coeff;
+      box-shadow: 0 (2px * $lg-xl-coeff) (6px * $lg-xl-coeff) rgba(0,0,0,0.22);
+    }
+    .events__card + .events__card {
+      margin-left: 5px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    padding: (54px * $md-xl-coeff) (460px * $md-xl-coeff) (154px * $md-xl-coeff);
+    
+    .events__title {
+      margin-bottom: 160px * $md-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $md-xl-coeff;
+  
+        width: 128px * $md-xl-coeff;
+        height: 6px * $md-xl-coeff;
+      }
+    }
+    .events__card {
+      width: 575px * $md-xl-coeff;
+      box-shadow: 0 (2px * $md-xl-coeff) (6px * $md-xl-coeff) rgba(0,0,0,0.22);
+    }
+    .events__card + .events__card {
+      margin-left: 5px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    padding: (54px * $sm-xl-coeff) (460px * $sm-xl-coeff) (154px * $sm-xl-coeff);
+    
+    .events__title {
+      margin-bottom: 160px * $sm-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $sm-xl-coeff;
+  
+        width: 128px * $sm-xl-coeff;
+        height: 6px * $sm-xl-coeff;
+      }
+    }
+    .events__card {
+      width: 575px * $sm-xl-coeff;
+      box-shadow: 0 (2px * $sm-xl-coeff) (6px * $sm-xl-coeff) rgba(0,0,0,0.22);
+    }
+    .events__card + .events__card {
+      margin-left: 5px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    padding: 0;
+
+    .events__list {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .events__title {
+      display: none;
+    }
+    .events__card {
+      flex-basis: 100%;
+      box-shadow: 0 (2px * $xs-xl-coeff) (6px * $xs-xl-coeff) rgba(0,0,0,0.22);
+
+      &:hover {
+        position: static;
+        transform: none;
+        transition: none;
+      }
+    }
   }
 }

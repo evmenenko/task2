@@ -1,5 +1,6 @@
 @import "../colors.scss";
 @import "../constants.scss";
+@import "../breakpoints.scss";
 
 .header {
   position: fixed;
@@ -11,21 +12,18 @@
 
   background-color: $dark-bg-color;
 
-  &__content {
+  .header__content {
     display: flex;
     align-items: center;
   }
-
-  &__logo {
+  .header__logo {
     height: 169px;
   }
-
-  &__nav {
+  .header__nav {
     height: 100%;
     margin: 0 150px;
 
-    @include set-property(font-size, 40px, 30px, 20px, 16px, 12px);
-    
+    font-size: 40px;    
     font-weight: 200;
 
     &-item {
@@ -51,8 +49,7 @@
       }
     }
   }
-
-  &__auth {
+  .header__auth {
     margin: 0px -20px;
     height: 100%;
 
@@ -81,6 +78,123 @@
       }
     }
   }
+  .header__button-toggle {
+    display: none;
+  }
+  @include desktop {
+    min-height: 206px * $lg-xl-coeff;
+
+    .header__logo {
+      height: 169px * $lg-xl-coeff;
+    }
+    .header__nav {
+      margin: 0 (150px * $lg-xl-coeff);
+
+      font-size: 40px * $lg-xl-coeff;
+
+      &-item {
+        position: relative;
+        padding: 0 (20px * $lg-xl-coeff);
+      }
+    }
+    .header__auth {
+      margin: 0px (-20px * $lg-xl-coeff);
+
+      &-link {
+        padding: 0px (40px * $lg-xl-coeff);
+
+        &-icon {
+          font-size: (36px * $lg-xl-coeff);
+        }
+        &-text {
+          font-size: (20px * $lg-xl-coeff);
+        }
+      }
+    }
+  }
+  @include laptop {
+    min-height: 206px * $md-xl-coeff;
+
+    .header__logo {
+      height: 169px * $md-xl-coeff;
+    }
+    .header__nav {
+      margin: 0 (150px * $md-xl-coeff);
+
+      font-size: 40px * $md-xl-coeff;
+
+      &-item {
+        position: relative;
+        padding: 0 (20px * $md-xl-coeff);
+      }
+    }
+    .header__auth {
+      margin: 0px (-20px * $md-xl-coeff);
+
+      &-link {
+        padding: 0px (40px * $md-xl-coeff);
+
+        &-icon {
+          font-size: (36px * $md-xl-coeff);
+        }
+        &-text {
+          font-size: (20px * $md-xl-coeff);
+        }
+      }
+    }
+  }
+  @include tablet {
+    min-height: 206px * $sm-xl-coeff;
+
+    .header__logo {
+      height: 169px * $sm-xl-coeff;
+    }
+    .header__nav {
+      margin: 0 (150px * $sm-xl-coeff);
+
+      font-size: 40px * $sm-xl-coeff;
+
+      &-item {
+        position: relative;
+        padding: 0 (20px * $sm-xl-coeff);
+      }
+    }
+    .header__auth {
+      margin: 0px (-20px * $sm-xl-coeff);
+
+      &-link {
+        padding: 0px (40px * $sm-xl-coeff);
+
+        &-icon {
+          font-size: (36px * $sm-xl-coeff);
+        }
+        &-text {
+          font-size: (20px * $sm-xl-coeff);
+        }
+      }
+    }
+  }
+  @include phone {
+    margin-top: -170px;
+    min-height: 194px;
+
+    .header__logo {
+      height: 130px;
+    }
+    .header__nav {
+      display: none;
+    }
+    .header__auth {
+      display: none;
+    }
+    .header__button-toggle {
+      display: block;
+      position: absolute;
+      right: 30px;
+      top: 78px;
+
+      font-size: 50px;
+      text-align: center;
+    }
+  }
 }
-
-

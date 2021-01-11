@@ -1,9 +1,11 @@
 @import "../colors.scss";
+@import "../constants.scss";
+@import '../breakpoints.scss';
 
 .about-us {
   position: relative;
 
-  &__caption {
+  .about-us__caption {
     position: absolute;
     left: 220px;
 
@@ -21,20 +23,17 @@
       border-radius: 13px;
       background-color: $main-text-color;
     }
-
     &-line {
       height: 2px;
       width: 176px;
       background-color: $main-text-color;
       margin-right: 10px;
     }
-
     &-text {
       color: $main-text-color;
     }
   }
-
-  &__title {
+  .about-us__title {
     position: relative;
     z-index: 0;
 
@@ -43,30 +42,32 @@
     width: fit-content;
 
     &:after {
-      content: url('../../../asset/img/under-line-3.png');
+      content: '';
       position: absolute;
       right: 0;
       bottom: -36px;
+
+      width: 138px;
+      height: 6px;
+
+      background-image: url('../../../asset/img/under-line-3.png');
+      background-size: cover;
     }
   }
-
-  &__content {
+  .about-us__content {
     display: flex;
     justify-content: space-between;
 
     padding: 100px 220px 160px;
   }
-
-  &__info-block {
+  .about-us__info-block {
     padding-left: 200px;
     width: 900px;
   }
-
-  &__info-block-title {
+  .about-us__info-block-title {
     color: $main-text-color;
   }
-
-  &__info-block-subtitle {
+  .about-us__info-block-subtitle {
     color: $main-text-color;
 
     &:after {
@@ -76,24 +77,204 @@
       width: 260px;
     }
   }
-
-  &__info-block-paragraph {
+  .about-us__info-block-paragraph {
     color: $secondary-text-color;
   }
-
-  &__statistics-list {
+  .about-us__statistics-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
     width: 800px;
   }
-
-  &__statistics {
+  .about-us__statistics {
     justify-content: space-between;
     width: 230px;
     height: 249px;
     padding-bottom: 55px;
     margin-bottom: 6px;
+  }
+  @include desktop {
+    .about-us__caption {
+      left: 220px * $lg-xl-coeff;
+      border: (1px * $lg-xl-coeff) solid $main-text-color;
+  
+      &-circle {
+        height: 26px * $lg-xl-coeff;
+        width: 26px * $lg-xl-coeff;
+        border-radius: 13px * $lg-xl-coeff;
+      }
+      &-line {
+        height: 2px * $lg-xl-coeff;
+        width: 176px * $lg-xl-coeff;
+        margin-right: 10px * $lg-xl-coeff;
+      }
+    }
+    .about-us__title {
+      padding-top: 170px * $lg-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $lg-xl-coeff;
+  
+        width: 138px * $lg-xl-coeff;
+        height: 6px * $lg-xl-coeff;
+      }
+    }
+    .about-us__content {
+      padding: (100px * $lg-xl-coeff) (220px * $lg-xl-coeff) (160px * $lg-xl-coeff);
+    }
+    .about-us__info-block {
+      padding-left: 200px * $lg-xl-coeff;
+      width: 900px * $lg-xl-coeff;
+    }
+    .about-us__info-block-subtitle {
+      &:after {
+        border: (1px * $lg-xl-coeff) solid $main-text-color;
+        width: 260px * $lg-xl-coeff;
+      }
+    }
+    .about-us__statistics-list {
+      padding-left: 20px * $lg-xl-coeff;
+      width: 800px * $lg-xl-coeff;
+    }
+    .about-us__statistics {
+      width: 230px * $lg-xl-coeff;
+      height: 249px * $lg-xl-coeff;
+      padding-bottom: 55px * $lg-xl-coeff;
+      margin-bottom: 6px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    .about-us__caption {
+      left: 220px * $md-xl-coeff;
+      border: (1px * $md-xl-coeff) solid $main-text-color;
+  
+      &-circle {
+        height: 26px * $md-xl-coeff;
+        width: 26px * $md-xl-coeff;
+        border-radius: 13px * $md-xl-coeff;
+      }
+      &-line {
+        height: 2px * $md-xl-coeff;
+        width: 176px * $md-xl-coeff;
+        margin-right: 10px * $md-xl-coeff;
+      }
+    }
+    .about-us__title {
+      padding-top: 170px * $md-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $md-xl-coeff;
+  
+        width: 138px * $md-xl-coeff;
+        height: 6px * $md-xl-coeff;
+      }
+    }
+    .about-us__content {
+      padding: (100px * $md-xl-coeff) (220px * $md-xl-coeff) (160px * $md-xl-coeff);
+    }
+    .about-us__info-block {
+      padding-left: 200px * $md-xl-coeff;
+      width: 900px * $md-xl-coeff;
+    }
+    .about-us__info-block-subtitle {
+      &:after {
+        border: (1px * $md-xl-coeff) solid $main-text-color;
+        width: 260px * $md-xl-coeff;
+      }
+    }
+    .about-us__statistics-list {
+      padding-left: 20px * $md-xl-coeff;
+      width: 800px * $md-xl-coeff;
+    }
+    .about-us__statistics {
+      width: 230px * $md-xl-coeff;
+      height: 249px * $md-xl-coeff;
+      padding-bottom: 55px * $md-xl-coeff;
+      margin-bottom: 6px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    .about-us__caption {
+      display: none;
+    }
+    .about-us__title {
+      padding-top: 170px * $sm-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $sm-xl-coeff;
+  
+        width: 138px * $sm-xl-coeff;
+        height: 6px * $sm-xl-coeff;
+      }
+    }
+    .about-us__content {
+      padding: (100px * $sm-xl-coeff) (220px * $sm-xl-coeff) (160px * $sm-xl-coeff);
+    }
+    .about-us__info-block {
+      padding-left: 200px * $sm-xl-coeff;
+      width: 900px * $sm-xl-coeff;
+    }
+    .about-us__info-block-subtitle {
+      &:after {
+        border: (1px * $sm-xl-coeff) solid $main-text-color;
+        width: 260px * $sm-xl-coeff;
+      }
+    }
+    .about-us__statistics-list {
+      padding-left: 20px * $sm-xl-coeff;
+      width: 800px * $sm-xl-coeff;
+    }
+    .about-us__statistics {
+      width: 230px * $sm-xl-coeff;
+      height: 249px * $sm-xl-coeff;
+      padding-bottom: 55px * $sm-xl-coeff;
+      margin-bottom: 6px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    .about-us__caption {
+      display: none;
+    }
+    .about-us__title {
+      padding-top: 170px * $xs-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $xs-xl-coeff;
+  
+        width: 138px * $xs-xl-coeff;
+        height: 6px * $xs-xl-coeff;
+      }
+    }
+    .about-us__content {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: (100px * $xs-xl-coeff) (220px * $xs-xl-coeff) (160px * $xs-xl-coeff);
+    }
+    .about-us__info-block {
+      padding: 0;
+      width: 560px;
+    }
+    .about-us__info-block-subtitle {
+      font-size: 26px;
+
+      &:after {
+        display: block;
+        border: none;
+        border-top: 1px solid $main-text-color;
+        width: 135px;
+        margin: 4px auto 0px;
+      }
+    }
+    .about-us__statistics-list {
+      padding-left: 20px * $xs-xl-coeff;
+      width: 800px * $xs-xl-coeff;
+    }
+    .about-us__statistics {
+      width: 230px * $xs-xl-coeff;
+      height: 249px * $xs-xl-coeff;
+      padding-bottom: 55px * $xs-xl-coeff;
+      margin-bottom: 6px * $xs-xl-coeff;
+    }
   }
 }

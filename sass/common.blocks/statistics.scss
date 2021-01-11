@@ -1,4 +1,6 @@
 @import "../colors.scss";
+@import "../constants.scss";
+@import '../breakpoints.scss';
 
 @mixin basic-statistics-theme($color) {
   border-bottom-color: $color;
@@ -7,13 +9,31 @@
     border: 16px solid transparentize($color, 0.5);
     color: $color;
   }
-
   .statistics__circle:before {
     background-color: $color;
   }
-
   .statistics__amount {
     color: $color;
+  }
+  @include desktop {
+    .statistics__circle {
+      border: (16px * $lg-xl-coeff) solid transparentize($color, 0.5);
+    }
+  }
+  @include laptop {
+    .statistics__circle {
+      border: (16px * $md-xl-coeff) solid transparentize($color, 0.5);
+    }
+  }
+  @include tablet {
+    .statistics__circle {
+      border: (16px * $sm-xl-coeff) solid transparentize($color, 0.5);
+    }
+  }
+  @include phone {
+    .statistics__circle {
+      border: (16px * $xs-xl-coeff) solid transparentize($color, 0.5);
+    }
   }
 }
 
@@ -22,7 +42,10 @@
   flex-direction: column;
   align-items: center;
 
-  &__circle {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+
+  .statistics__circle {
     position: relative;
     width: 64px;
     height: 64px;
@@ -38,26 +61,108 @@
       border-radius: 32px;
     }
   }
-
-  &__amount {
+  .statistics__amount {
     font-size: 64px;
   }
-
-  &__caption {
+  .statistics__caption {
     font-size: 32px;
     color: transparentize($secondary-text-color, 0.3);
   }
-
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-
-  &_success {
+  &.statistics_success {
     @include basic-statistics-theme($success-color);
   }
-  &_danger {
+  &.statistics_danger {
     @include basic-statistics-theme($danger-color);
   }
-  &_warning {
+  &.statistics_warning {
     @include basic-statistics-theme($warning-color);
+  }
+  @include desktop {
+    border-bottom-width: 5px * $lg-xl-coeff;
+  
+    .statistics__circle {
+      width: 64px * $lg-xl-coeff;
+      height: 64px * $lg-xl-coeff;
+      border-radius: 64px * $lg-xl-coeff;
+  
+      &:before {
+        margin: 2px * $lg-xl-coeff;
+        width: 60px * $lg-xl-coeff;
+        height: 60px * $lg-xl-coeff;
+        border-radius: 32px * $lg-xl-coeff;
+      }
+    }
+    .statistics__amount {
+      font-size: 64px * $lg-xl-coeff;
+    }
+    .statistics__caption {
+      font-size: 32px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    border-bottom-width: 5px * $md-xl-coeff;
+  
+    .statistics__circle {
+      width: 64px * $md-xl-coeff;
+      height: 64px * $md-xl-coeff;
+      border-radius: 64px * $md-xl-coeff;
+  
+      &:before {
+        margin: 2px * $md-xl-coeff;
+        width: 60px * $md-xl-coeff;
+        height: 60px * $md-xl-coeff;
+        border-radius: 32px * $md-xl-coeff;
+      }
+    }
+    .statistics__amount {
+      font-size: 64px * $md-xl-coeff;
+    }
+    .statistics__caption {
+      font-size: 32px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    border-bottom-width: 5px * $sm-xl-coeff;
+  
+    .statistics__circle {
+      width: 64px * $sm-xl-coeff;
+      height: 64px * $sm-xl-coeff;
+      border-radius: 64px * $sm-xl-coeff;
+  
+      &:before {
+        margin: 2px * $sm-xl-coeff;
+        width: 60px * $sm-xl-coeff;
+        height: 60px * $sm-xl-coeff;
+        border-radius: 32px * $sm-xl-coeff;
+      }
+    }
+    .statistics__amount {
+      font-size: 64px * $sm-xl-coeff;
+    }
+    .statistics__caption {
+      font-size: 32px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    border-bottom-width: 5px * $xs-xl-coeff;
+  
+    .statistics__circle {
+      width: 64px * $xs-xl-coeff;
+      height: 64px * $xs-xl-coeff;
+      border-radius: 64px * $xs-xl-coeff;
+  
+      &:before {
+        margin: 2px * $xs-xl-coeff;
+        width: 60px * $xs-xl-coeff;
+        height: 60px * $xs-xl-coeff;
+        border-radius: 32px * $xs-xl-coeff;
+      }
+    }
+    .statistics__amount {
+      font-size: 64px * $xs-xl-coeff;
+    }
+    .statistics__caption {
+      font-size: 32px * $xs-xl-coeff;
+    }
   }
 }

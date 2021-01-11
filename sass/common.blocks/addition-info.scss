@@ -1,3 +1,6 @@
+@import "../constants.scss";
+@import "../breakpoints.scss";
+
 .addition-info {
   background-size: cover;
 
@@ -10,14 +13,81 @@
   width: 385px;
   height: 385px;
 
-  &__image {
+  .addition-info__image {
     margin-top: 70px;
+
+    width: 108px;
+    height: 108px;
   }
-  
-  &__text {
+  .addition-info__text {
     margin-top: 20px;
 
     font-size: 32px;
     color: black;
+  }
+  @include desktop {
+    width: 385px * $lg-xl-coeff;
+    height: 385px * $lg-xl-coeff;
+  
+    .addition-info__image {
+      margin-top: 70px * $lg-xl-coeff;
+
+      width: 108px * $lg-xl-coeff;
+      height: 108px * $lg-xl-coeff;
+    }
+    .addition-info__text {
+      margin-top: 20px * $lg-xl-coeff;
+  
+      font-size: 32px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    width: 385px * $md-xl-coeff;
+    height: 385px * $md-xl-coeff;
+  
+    .addition-info__image {
+      margin-top: 70px * $md-xl-coeff;
+
+      width: 108px * $md-xl-coeff;
+      height: 108px * $md-xl-coeff;
+    }
+    .addition-info__text {
+      margin-top: 20px * $md-xl-coeff;
+  
+      font-size: 32px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    width: 385px * $sm-xl-coeff;
+    height: 385px * $sm-xl-coeff;
+  
+    .addition-info__image {
+      margin-top: 70px * $sm-xl-coeff;
+
+      width: 108px * $sm-xl-coeff;
+      height: 108px * $sm-xl-coeff;
+    }
+    .addition-info__text {
+      margin-top: 20px * $sm-xl-coeff;
+  
+      font-size: 32px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    width: 120px;
+    height: 120px;
+  
+    .addition-info__image {
+      margin-top: 22px;
+
+      width: 33px;
+      height: 33px;
+    }
+    .addition-info__text {
+      margin-top: 6px;
+  
+      font-size: 10.5px;
+      font-weight: 600;
+    }  
   }
 }

@@ -1,11 +1,13 @@
 @import "../colors.scss";
+@import "../constants.scss";
+@import "../breakpoints.scss";
 
 .action {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  &__image-container {
+  .action__image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,13 +27,68 @@
       color: $primary-text-color;
     }
   }
-
-  &__info {
+  .action__info {
     margin-top: 68px;
 
     text-align: center;
     color: $main-text-color;
     font-size: 36px;
     font-weight: 600;
+  }
+  @include desktop {
+    .action__image-container {
+      border: (1px * $lg-xl-coeff) solid $primary-bg-color;
+      font-size: 80px * $lg-xl-coeff;
+  
+      height: 162px * $lg-xl-coeff;
+      width: 162px * $lg-xl-coeff;
+    }
+    .action__info {
+      margin-top: 68px * $lg-xl-coeff;
+      
+      font-size: 36px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    .action__image-container {
+      border: (1px * $md-xl-coeff) solid $primary-bg-color;
+      font-size: 80px * $md-xl-coeff;
+  
+      height: 162px * $md-xl-coeff;
+      width: 162px * $md-xl-coeff;
+    }
+    .action__info {
+      margin-top: 68px * $md-xl-coeff;
+      
+      font-size: 36px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    .action__image-container {
+      border: (1px * $sm-xl-coeff) solid $primary-bg-color;
+      font-size: 80px * $sm-xl-coeff;
+  
+      height: 162px * $sm-xl-coeff;
+      width: 162px * $sm-xl-coeff;
+    }
+    .action__info {
+      margin-top: 68px * $sm-xl-coeff;
+      
+      font-size: 36px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    .action__image-container {
+      border: (1px * $xs-xl-coeff) solid $primary-bg-color;
+      font-size: 58px;
+  
+      height: 96px;
+      width: 96px;
+    }
+    .action__info {
+      margin-top: 40px;
+      
+      font-size: 20.5px;
+    }  
   }
 }

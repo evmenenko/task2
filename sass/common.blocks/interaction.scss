@@ -1,11 +1,13 @@
 @import "../colors.scss";
+@import "../constants.scss";
+@import "../breakpoints.scss";
 
 .interaction {
   position: relative;
 
   background-color: $primary-bg-color;
 
-  &__caption {
+  .interaction__caption {
     position: absolute;
     left: 220px;
 
@@ -18,35 +20,29 @@
       border-radius: 13px;
       background-color: $primary-text-color;
     }
-
     &-line {
       height: 2px;
       width: 176px;
       background-color: $primary-text-color;
       margin-right: 10px;
     }
-
     &-text {
       color: $primary-text-color;
     }
   }
-
-  &__content {
+  .interaction__content {
     display: flex;
     justify-content: space-between;
     padding: 70px 380px 70px 420px;
   }
-
-  &__info-block {
+  .interaction__info-block {
     width: 950px;
   }
-
-  &__title {
+  .interaction__title {
     margin-bottom: 20px;
     width: 560px;
   }
-
-  &__subtitle {
+  .interaction__subtitle {
     margin-bottom: 60px;
 
     &:after {
@@ -56,8 +52,7 @@
       width: 320px;
     }
   }
-
-  &__addition-infos {
+  .interaction__addition-infos {
     position: relative;
     margin-left: 100px;
     width: 610px;
@@ -77,6 +72,207 @@
       &-select {
         top: 420px;
         background-image: url('../../../asset/img/rhombus/rhombus-1.png');
+      }
+    }
+  }
+  @include desktop {
+    .interaction__caption {
+      left: 220px * $lg-xl-coeff;
+  
+      &-circle {
+        height: 26px * $lg-xl-coeff;
+        width: 26px * $lg-xl-coeff;
+        border-radius: 13px * $lg-xl-coeff;
+      }
+      &-line {
+        height: 2px * $lg-xl-coeff;
+        width: 176px * $lg-xl-coeff;
+        margin-right: 10px * $lg-xl-coeff;
+      }
+    }
+    .interaction__content {
+      padding: (70px * $lg-xl-coeff) (380px * $lg-xl-coeff) (70px * $lg-xl-coeff) (420px * $lg-xl-coeff);
+    }
+    .interaction__info-block {
+      width: 950px * $lg-xl-coeff;
+    }
+    .interaction__title {
+      margin-bottom: 20px * $lg-xl-coeff;
+      width: 560px * $lg-xl-coeff;
+    }
+    .interaction__subtitle {
+      margin-bottom: 60px * $lg-xl-coeff;
+  
+      &:after {
+        border: (1px * $lg-xl-coeff) solid $primary-text-color;
+        width: 320px * $lg-xl-coeff;
+      }
+    }
+    .interaction__addition-infos {
+      margin-left: 100px * $lg-xl-coeff;
+      width: 610px * $lg-xl-coeff;
+  
+      &-block {
+        &-ask {
+          top: 60px * $lg-xl-coeff;
+        }
+        &-choose {
+          left: 230px * $lg-xl-coeff;
+          top: 240px * $lg-xl-coeff;
+        }
+        &-select {
+          top: 420px * $lg-xl-coeff;
+        }
+      }
+    }
+  }
+  @include laptop {
+    .interaction__caption {
+      left: 220px * $md-xl-coeff;
+  
+      &-circle {
+        height: 26px * $md-xl-coeff;
+        width: 26px * $md-xl-coeff;
+        border-radius: 13px * $md-xl-coeff;
+      }
+      &-line {
+        height: 2px * $md-xl-coeff;
+        width: 176px * $md-xl-coeff;
+        margin-right: 10px * $md-xl-coeff;
+      }
+    }
+    .interaction__content {
+      padding: (70px * $md-xl-coeff) (380px * $md-xl-coeff) (70px * $md-xl-coeff) (420px * $md-xl-coeff);
+    }
+    .interaction__info-block {
+      width: 950px * $md-xl-coeff;
+    }
+    .interaction__title {
+      margin-bottom: 20px * $md-xl-coeff;
+      width: 560px * $md-xl-coeff;
+    }
+    .interaction__subtitle {
+      margin-bottom: 60px * $md-xl-coeff;
+  
+      &:after {
+        border: (1px * $md-xl-coeff) solid $primary-text-color;
+        width: 320px * $md-xl-coeff;
+      }
+    }
+    .interaction__addition-infos {
+      margin-left: 100px * $md-xl-coeff;
+      width: 610px * $md-xl-coeff;
+  
+      &-block {
+        &-ask {
+          top: 60px * $md-xl-coeff;
+        }
+        &-choose {
+          left: 230px * $md-xl-coeff;
+          top: 240px * $md-xl-coeff;
+        }
+        &-select {
+          top: 420px * $md-xl-coeff;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .interaction__caption {
+      display: none;
+    }
+    .interaction__content {
+      padding: (70px * $sm-xl-coeff) (380px * $sm-xl-coeff) (70px * $sm-xl-coeff) (420px * $sm-xl-coeff);
+    }
+    .interaction__info-block {
+      width: 950px * $sm-xl-coeff;
+    }
+    .interaction__title {
+      margin-bottom: 20px * $sm-xl-coeff;
+      width: 560px * $sm-xl-coeff;
+    }
+    .interaction__subtitle {
+      margin-bottom: 60px * $sm-xl-coeff;
+  
+      &:after {
+        border: (1px * $sm-xl-coeff) solid $primary-text-color;
+        width: 320px * $sm-xl-coeff;
+      }
+    }
+    .interaction__addition-infos {
+      margin-left: 100px * $sm-xl-coeff;
+      width: 610px * $sm-xl-coeff;
+  
+      &-block {
+        &-ask {
+          top: 60px * $sm-xl-coeff;
+        }
+        &-choose {
+          left: 230px * $sm-xl-coeff;
+          top: 240px * $sm-xl-coeff;
+        }
+        &-select {
+          top: 420px * $sm-xl-coeff;
+        }
+      }
+    }
+  }
+  @include phone {
+    .interaction__caption {
+      display: none;
+    }
+    .interaction__content {
+      flex-direction: column-reverse;
+      padding: 30px 50px;
+    }
+    .interaction__info-block {
+      width: 100%;
+    }
+    .interaction__title {
+      margin: 0;
+      width: 100%;
+
+      font-size: 19px;
+      font-weight: 500;
+    }
+    .interaction__subtitle {
+      margin: 10px auto 30px;
+      font-size: 15.5px;
+      width: fit-content;
+  
+      &:after {
+        display: block;
+        border: none;
+        border-top: 1px solid $primary-text-color;
+        width: 100px;
+        margin: 4px auto 0px;
+      }
+    }
+    .interaction__paragraph {
+      font-size: 12.5px;
+      display: inline;
+    }
+    .interaction__addition-infos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0px 10px;
+      width: 100%;
+  
+      &-block {
+        position: static;
+        flex-basis: 120px;
+        margin: 0px 20px;
+
+        &-ask {
+          order: 0;
+        }
+        &-choose {
+          order: 2;
+        }
+        &-select {
+          order: 1;
+        }
       }
     }
   }

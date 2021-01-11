@@ -4,14 +4,24 @@
   border: 1px solid $main-bg-color;
   background-color: rgba(0, 0, 0, 0);
   color: $primary-text-color;
-
   &:hover {
     background-color: $main-bg-color;
     color: $main-text-color;
   }
-
   &:active {
     background-color: $main-bg-color;
     color: $main-text-color;
+  }
+  @include desktop {
+    border: (1px * $lg-xl-coeff) solid $main-bg-color;
+  }
+  @include laptop {
+    border: (1px * $md-xl-coeff) solid $main-bg-color;
+  }
+  @include tablet {
+    border: (1px * $sm-xl-coeff) solid $main-bg-color;
+  }
+  @include phone {
+    border: (1px * $xs-xl-coeff) solid $main-bg-color;
   }
 }

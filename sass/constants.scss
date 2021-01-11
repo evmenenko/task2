@@ -1,8 +1,16 @@
-$screen-xl-min: 1860px;
+// constats for screen sizes
+
+$screen-xl-min: 1900px;
 $screen-lg-max: $screen-xl-min - 1px;
-$screen-lg-min: 1200px;
+$screen-lg-min: 1500px;
 $screen-md-max: $screen-lg-min - 1px;
-$screen-md-min: 768px;
+$screen-md-min: 1200px;
 $screen-sm-max: $screen-md-min - 1px;
-$screen-sm-min: 576px;
+$screen-sm-min: 750px;
 $screen-xs-max: $screen-sm-min - 1px;
+$screen-xs-min: 320px;
+
+$lg-xl-coeff: $screen-lg-min / $screen-xl-min;
+$md-xl-coeff: $screen-md-min / $screen-xl-min;
+$sm-xl-coeff: $screen-sm-min / $screen-xl-min;
+$xs-xl-coeff: $screen-xs-min / $screen-xl-min;

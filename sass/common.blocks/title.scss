@@ -1,21 +1,61 @@
 @import '../colors.scss';
+@import "../constants.scss";
+@import '../breakpoints.scss';
 
 .title {
-  color: $main-text-color;
   font-size: 82px;
 
-  &_strong-theme {
+  &.title_strong-theme {
     color: $primary-text-color;
     font-weight: 900;
   }
-
-  &_lite-theme {
+  &.title_lite-theme {
+    letter-spacing: 4px;
+    
     color: $main-text-color;
     font-weight: 300;
-    letter-spacing: 4px;
   }
-
-  &_with-shadow {
+  &.title_with-shadow {
     text-shadow: 0px 6px black;
+  }
+  @include desktop {
+    font-size: 82px * $lg-xl-coeff;
+
+    &.title_lite-theme {
+      letter-spacing: 4px * $lg-xl-coeff;
+    }
+    &.title_with-shadow {
+      text-shadow: 0px (6px * $lg-xl-coeff) black;
+    }
+  }
+  @include laptop {
+    font-size: 82px * $md-xl-coeff;
+
+    &.title_lite-theme {
+      letter-spacing: 4px * $md-xl-coeff;
+    }
+    &.title_with-shadow {
+      text-shadow: 0px (6px * $md-xl-coeff) black;
+    }
+  }
+  @include tablet {
+    font-size: 52px;
+
+    &.title_lite-theme {
+      letter-spacing: 4px * $sm-xl-coeff;
+    }
+    &.title_with-shadow {
+      text-shadow: 0px (6px * $sm-xl-coeff) black;
+    }
+  }
+  @include phone {
+    font-size: 44px;
+
+    &.title_lite-theme {
+      letter-spacing: 7px;
+    }
+    &.title_with-shadow {
+      text-shadow: 0px 4px black;
+    }
   }
 }

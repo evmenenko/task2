@@ -3,6 +3,8 @@
 @import "../../../asset/fonts/icomoon/style.css";
 @import "../../styles.scss";
 
+// common styles
+
 @import "../../common.blocks/header.scss";
 @import "../../common.blocks/landing.scss";
 @import "../../common.blocks/title.scss";
@@ -10,7 +12,6 @@
 @import "../../common.blocks/how-it-works.scss";
 @import "../../common.blocks/action.scss";
 @import "../../common.blocks/button.scss";
-@import "../../common.blocks/caption.scss";
 @import "../../common.blocks/info-block.scss";
 @import "../../common.blocks/interaction.scss";
 @import "../../common.blocks/features.scss";
@@ -19,6 +20,18 @@
 @import "../../common.blocks/statistics.scss";
 @import "../../common.blocks/card.scss";
 @import "../../common.blocks/footer.scss";
-@import "../../common.blocks/partners.scss";
 @import "../../common.blocks/carousel.scss";
+@import "../../common.blocks/partners.scss";
 @import "../../common.blocks/addition-info.scss";
+
+// desktop styles
+
+@import "../../desktop.blocks/caption.scss";
+
+// desktop styles
+
+
+
+// desktop styles
+
+

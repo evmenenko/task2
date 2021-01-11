@@ -6,34 +6,31 @@
 
   line-height: 1.15;
 
-  &__content {
+  .footer__content {
     display: flex;
     justify-content: space-between;
     padding: 130px 260px;
   }
-
-  &__info {
+  .footer__info {
     width: 480px;
 
-    &-image {
+    &-logo {
       display: block;
       margin: 0 auto 65px; 
+      height: 169px;
     }
-
     &-text {
       font-size: 26.5px;
       font-weight: 200;
       text-align: center;
     }
   }
-
-  &__link-list {
+  .footer__link-list {
     margin-top: 120px;
 
     &-head {
       font-size: 27px;
     }
-
     &-content {
       margin-top: 40px;
       font-weight: 200;
@@ -42,15 +39,13 @@
       &-link {
         font-weight: 200;
       }
-
       &_inline {
         display: flex;
         justify-content: space-around;
       }
     }
   }
-  
-  &__subscription {
+  .footer__subscription {
     width: 376px;
 
     font-size: 21px;
@@ -60,12 +55,10 @@
     &-head {
       font-weight: normal;
     }
-
     &-links {
       font-size: 32px;
       margin-bottom: 40px;
     }
-
     &-form {
       margin-top: 35px;
       position: relative;
@@ -86,7 +79,6 @@
           font-weight: 200;
         }
       }
-
       &-letter {
         position: absolute;
         top: 10px;
@@ -96,12 +88,255 @@
       }
     }
   }
-
-  &__rights {
+  .footer__rights {
     padding: 50px 0px;
     text-align: center;
 
     font-size: 29px;
     font-weight: 200;
+  }
+  @include desktop {
+    .footer__content {
+      padding: (130px * $lg-xl-coeff) (260px * $lg-xl-coeff);
+    }
+    .footer__info {
+      width: (480px * $lg-xl-coeff);
+  
+      &-logo {
+        margin: 0 auto (65px * $lg-xl-coeff); 
+        height: 169px * $lg-xl-coeff;
+      }
+      &-text {
+        font-size: 26.5px * $lg-xl-coeff;
+      }
+    }
+    .footer__link-list {
+      margin-top: 120px * $lg-xl-coeff;
+  
+      &-head {
+        font-size: 27px * $lg-xl-coeff;
+      }
+      &-content {
+        margin-top: 40px * $lg-xl-coeff;
+        font-size: 21px * $lg-xl-coeff;
+      }
+    }
+    .footer__subscription {
+      width: 376px * $lg-xl-coeff;
+  
+      font-size: 21px * $lg-xl-coeff;
+  
+      &-links {
+        font-size: 32px * $lg-xl-coeff;
+        margin-bottom: 40px * $lg-xl-coeff;
+      }
+      &-form {
+        margin-top: 35px * $lg-xl-coeff;
+  
+        &-email {
+          padding: 0 (55px * $lg-xl-coeff);
+          height: 42px * $lg-xl-coeff;
+          
+          font-size: 21px * $lg-xl-coeff;
+          border-bottom: (2px * $lg-xl-coeff) solid $primary-text-color;
+  
+          &::placeholder {
+            font-size: 21px * $lg-xl-coeff;
+          }
+        }
+        &-letter {
+          top: 10px * $lg-xl-coeff;
+          right: 15px * $lg-xl-coeff;
+        }
+      }
+    }
+    .footer__rights {
+      padding: (50px * $lg-xl-coeff) 0px;
+  
+      font-size: 29px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    .footer__content {
+      padding: (130px * $md-xl-coeff) (260px * $md-xl-coeff);
+    }
+    .footer__info {
+      width: (480px * $md-xl-coeff);
+  
+      &-logo {
+        margin: 0 auto (65px * $md-xl-coeff); 
+        height: 169px * $md-xl-coeff;
+      }
+      &-text {
+        font-size: 26.5px * $md-xl-coeff;
+      }
+    }
+    .footer__link-list {
+      margin-top: 120px * $md-xl-coeff;
+  
+      &-head {
+        font-size: 27px * $md-xl-coeff;
+      }
+      &-content {
+        margin-top: 40px * $md-xl-coeff;
+        font-size: 21px * $md-xl-coeff;
+      }
+    }
+    .footer__subscription {
+      width: 376px * $md-xl-coeff;
+  
+      font-size: 21px * $md-xl-coeff;
+  
+      &-links {
+        font-size: 32px * $md-xl-coeff;
+        margin-bottom: 40px * $md-xl-coeff;
+      }
+      &-form {
+        margin-top: 35px * $md-xl-coeff;
+  
+        &-email {
+          padding: 0 (55px * $md-xl-coeff);
+          height: 42px * $md-xl-coeff;
+          
+          font-size: 21px * $md-xl-coeff;
+          border-bottom: (2px * $md-xl-coeff) solid $primary-text-color;
+  
+          &::placeholder {
+            font-size: 21px * $md-xl-coeff;
+          }
+        }
+        &-letter {
+          top: 10px * $md-xl-coeff;
+          right: 15px * $md-xl-coeff;
+        }
+      }
+    }
+    .footer__rights {
+      padding: (50px * $md-xl-coeff) 0px;
+  
+      font-size: 29px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    .footer__content {
+      padding: (130px * $sm-xl-coeff) (260px * $sm-xl-coeff);
+    }
+    .footer__info {
+      width: (480px * $sm-xl-coeff);
+  
+      &-logo {
+        margin: 0 auto (65px * $sm-xl-coeff);
+        height: 169px * $sm-xl-coeff;
+      }
+      &-text {
+        font-size: 26.5px * $sm-xl-coeff;
+      }
+    }
+    .footer__link-list {
+      margin-top: 120px * $sm-xl-coeff;
+  
+      &-head {
+        font-size: 27px * $sm-xl-coeff;
+      }
+      &-content {
+        margin-top: 40px * $sm-xl-coeff;
+        font-size: 21px * $sm-xl-coeff;
+      }
+    }
+    .footer__subscription {
+      width: 376px * $sm-xl-coeff;
+  
+      font-size: 21px * $sm-xl-coeff;
+  
+      &-links {
+        font-size: 32px * $sm-xl-coeff;
+        margin-bottom: 40px * $sm-xl-coeff;
+      }
+      &-form {
+        margin-top: 35px * $sm-xl-coeff;
+  
+        &-email {
+          padding: 0 (55px * $sm-xl-coeff);
+          height: 42px * $sm-xl-coeff;
+          
+          font-size: 21px * $sm-xl-coeff;
+          border-bottom: (2px * $sm-xl-coeff) solid $primary-text-color;
+  
+          &::placeholder {
+            font-size: 21px * $sm-xl-coeff;
+          }
+        }
+        &-letter {
+          top: 10px * $sm-xl-coeff;
+          right: 15px * $sm-xl-coeff;
+        }
+      }
+    }
+    .footer__rights {
+      padding: (50px * $sm-xl-coeff) 0px;
+  
+      font-size: 29px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    .footer__content {
+      padding: (130px * $xs-xl-coeff) (260px * $xs-xl-coeff);
+    }
+    .footer__info {
+      width: (480px * $xs-xl-coeff);
+  
+      &-logo {
+        margin: 0 auto (65px * $xs-xl-coeff); 
+        height: 169px * $xs-xl-coeff;
+      }
+      &-text {
+        font-size: 26.5px * $xs-xl-coeff;
+      }
+    }
+    .footer__link-list {
+      margin-top: 120px * $xs-xl-coeff;
+  
+      &-head {
+        font-size: 27px * $xs-xl-coeff;
+      }
+      &-content {
+        margin-top: 40px * $xs-xl-coeff;
+        font-size: 21px * $xs-xl-coeff;
+      }
+    }
+    .footer__subscription {
+      width: 376px * $xs-xl-coeff;
+  
+      font-size: 21px * $xs-xl-coeff;
+  
+      &-links {
+        font-size: 32px * $xs-xl-coeff;
+        margin-bottom: 40px * $xs-xl-coeff;
+      }
+      &-form {
+        margin-top: 35px * $xs-xl-coeff;
+  
+        &-email {
+          padding: 0 (55px * $xs-xl-coeff);
+          height: 42px * $xs-xl-coeff;
+          
+          font-size: 21px * $xs-xl-coeff;
+          border-bottom: (2px * $xs-xl-coeff) solid $primary-text-color;
+  
+          &::placeholder {
+            font-size: 21px * $xs-xl-coeff;
+          }
+        }
+        &-letter {
+          top: 10px * $xs-xl-coeff;
+          right: 15px * $xs-xl-coeff;
+        }
+      }
+    }
+    .footer__rights {
+      padding: (50px * $xs-xl-coeff) 0px;
+  
+      font-size: 29px * $xs-xl-coeff;
+    }
   }
 }

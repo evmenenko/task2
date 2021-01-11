@@ -1,3 +1,6 @@
+@import "../constants.scss";
+@import "../breakpoints.scss";
+
 .how-it-works {
   display: flex;
   flex-direction: column;
@@ -5,24 +8,104 @@
 
   padding: 154px 250px;
 
-  &__title {
+  .how-it-works__title {
     position: relative;
     z-index: 0;
     margin-bottom: 134px;
 
     &:after {
-      content: url('../../../asset/img/under-line-2.png');
+      content: '';
       position: absolute;
       left: 0;
       bottom: -36px;
+
+      width: 128px;
+      height: 6px;
+
+      background-image: url('../../../asset/img/under-line-2.png');
+      background-size: cover;
     }
   }
-
-  &__actions {
+  .how-it-works__actions {
     display: flex;
     justify-content: space-between;
     margin-top: 36px;
 
     width: 100%;
+  }
+  @include desktop {
+    padding: (154px * $lg-xl-coeff) (250px * $lg-xl-coeff);
+  
+    .how-it-works__title {
+      margin-bottom: 134px * $lg-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $lg-xl-coeff;
+
+        width: 128px * $lg-xl-coeff;
+        height: 6px * $lg-xl-coeff;
+      }
+    }
+    .how-it-works__actions {
+      margin-top: 36px * $lg-xl-coeff;
+    }
+  }
+  @include laptop {
+    padding: (154px * $md-xl-coeff) (250px * $md-xl-coeff);
+  
+    .how-it-works__title {
+      margin-bottom: 134px * $md-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $md-xl-coeff;
+
+        width: 128px * $md-xl-coeff;
+        height: 6px * $md-xl-coeff;
+      }
+    }
+    .how-it-works__actions {
+      margin-top: 36px * $md-xl-coeff;
+    }
+  }
+  @include tablet {
+    padding: (154px * $sm-xl-coeff) (250px * $sm-xl-coeff);
+  
+    .how-it-works__title {
+      margin-bottom: 134px * $sm-xl-coeff;
+  
+      &:after {
+        bottom: -36px * $sm-xl-coeff;
+
+        width: 128px * $sm-xl-coeff;
+        height: 6px * $sm-xl-coeff;
+      }
+    }
+    .how-it-works__actions {
+      margin-top: 36px * $sm-xl-coeff;
+    }
+  }
+  @include phone {
+    padding: 60px 15px;
+  
+    .how-it-works__title {
+      margin-bottom: 134px * $xs-xl-coeff;
+  
+      &:after {
+        bottom: -10px;
+        left: 4px;
+
+        width: 72px;
+        height: 3px;
+      }
+    }
+    .how-it-works__actions {
+      margin-top: 36px * $xs-xl-coeff;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    .how-it-works__action {
+      margin-top: 50px;
+      flex-basis: 40%;
+    }
   }
 }
